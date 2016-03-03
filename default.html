@@ -1,0 +1,123 @@
+<!-- CEN 3073 Project
+Advising Appointment Scheduler
+Author: Justin Gosselin, Reza Ansary
+Modified: March 7, 2015
+-->
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+
+		<!-- Set the viewport width to device width for mobile -->
+		<meta name="viewport" content="width=device-width" />
+
+		<title>FGCU Advising Scheduler</title>
+
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/project.css">
+        <link rel="stylesheet" href="css/elements.css"> 
+        <link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
+
+		<script src="js/vendor/custom.modernizr.js"></script>
+        <script src="js/my_js.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="js/app.js"></script>
+
+	</head>
+	<body>
+		<div class="row">
+			<div class="large-12 columns">
+				<h1><img src="images/fgcu_logo.jpg" alt="logo">
+                U.A. Whitaker College of Engineering
+                </h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 columns">
+				<h4>Welcome to the Engineering Advising Appointment Creator!</h4>
+					To begin, enter your 9-digit FGCU UIN and password below:
+                <br><font size="2"><b>Note:</b> this login is separate from your normal FGCU logins.</font>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-6 columns">
+				<p>
+					<form action="dashboard.html">
+						<input type="text" name="uin" autofocus placeholder="FGCU UIN" maxlength="9" required>
+                        <input type="password" name="password" autofocus placeholder="Password" maxlength="20" required>
+						<input type="submit" name="login" id="login" value="Login" class="login">
+                        <br>
+                        <br>
+                        First time here?
+                        <a href="CreateAccount.php">Click here to create an account.</a>
+                        <br><br>
+                        Not an FGCU student?
+                        <a href="#" onclick="div_show()">Click here.</a>
+						<!--<input type="submit" name="Not a FGCU student" id="Not a FGCU student" value="Not a FGCU student">-->
+						<!--<input type="submit" name="Create Account" id="Create Account" value="Create Account">-->
+					</form>
+				</p>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="row">
+			<div class="large-12 columns">
+				<hr />
+				<div class="row">
+					<div class="large-6 columns">
+
+						<section class="grid_5" id="footerlink2">
+
+							<p>
+								&copy; 2015, SWEagle, Florida Gulf Coast University
+							</p>
+
+						</section>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			document.write('<script src=js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+		</script>
+
+		<script src="js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
+		<!-- End Footer -->
+    
+    </body>
+
+<div class="bodyPopup">
+<div id="abc" style="display: none;">
+<!-- Popup Div Starts Here -->
+<div id="popupContact">
+<div class="spinner" style="display: none;" id="spinner"></div>
+<!-- Contact Us Form -->
+<form id="contactForm" name="form" class="formPopup" method="POST" action="non_fgcu_email.php">
+<img id="closePopup" src="images/3.png" onclick ="div_hide()">
+<h2 class="h2Popup">Non-FGCU Students</h2>
+<hr class="hrPopup">
+<h4 class="h4Popup">Your information below will be sent to Rachel Boyce, the advising secretary.</h4>
+<hr class="hrPopup">
+<input id="name" name="name" placeholder="Name" type="text" class="inputPopup">
+<input id="email" name="email" placeholder="Email" type="text" class="inputPopup">
+<input id="phone" name="phone" placeholder="Phone Number" type="text" class="inputPopup">
+<input id="school" name="school" placeholder="Institution" type="text" class="inputPopup">
+<textarea id="msg" name="msg" placeholder="Reason for Visit" class="textareaPopup"></textarea>
+<a href="javascript:%20check_empty()" id="submitPopup" class="link">Send</a>
+</form>
+</div>
+<!-- Popup Div Ends Here -->
+</div>
+<!-- Display Popup Button -->
+</body>
+</div>
+   
+</html>
